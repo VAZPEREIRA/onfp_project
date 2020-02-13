@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StatutController {
 
 	@GetMapping("/statuts")
-	public  String  getApports() {
+	public  String  getStatuts() {
 		return "statut";
 	}
 }

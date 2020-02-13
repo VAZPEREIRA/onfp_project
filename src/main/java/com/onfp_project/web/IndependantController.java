@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndependantController {
 
 	@GetMapping("/independants")
-	public  String  getCamions() {
+	public  String  getIndependants() {
 		return "independant";
 	}
 }

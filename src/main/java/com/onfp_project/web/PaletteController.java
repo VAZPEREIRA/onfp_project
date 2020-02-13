@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PaletteController {
 
 	@GetMapping("/palettes")
-	public  String  getLivreurs() {
+	public  String  getPalettes() {
 		return "palette";
 	}
 }

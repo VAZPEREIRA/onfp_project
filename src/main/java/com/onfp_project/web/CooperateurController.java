@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class CooperateurController {
 	
 	@GetMapping("/cooperateurs")
-	public  String  getApports() {
+	public  String  getCooperateurs() {
 		return "cooperateur";
 	}
 

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ParcelleController {
 
 	@GetMapping("/parcelles")
-	public  String  getLivreurs() {
+	public  String  getParcelles() {
 		return "parcelle";
 	}
 }
