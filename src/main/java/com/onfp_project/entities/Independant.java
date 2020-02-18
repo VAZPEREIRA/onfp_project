@@ -8,8 +8,7 @@ import javax.persistence.ManyToOne;
 @DiscriminatorValue("INP")
 public class Independant extends Livreur {
 
-	@ManyToOne
-	private Statut statut;
+	
 
 	public Independant() {
 		super();

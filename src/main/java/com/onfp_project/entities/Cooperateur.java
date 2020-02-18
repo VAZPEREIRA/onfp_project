@@ -11,26 +11,30 @@ import javax.persistence.OneToMany;
 public class Cooperateur extends Livreur {
 
 	private double taux;
-	@OneToMany(mappedBy="cooperateur")
-	private Collection<Parcelle> parcelles;
-
+	private int numParcelle;
 	public Cooperateur() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public Cooperateur(String nom, String prenom, String adresse, String telephone, double taux) {
-		super(nom, prenom, adresse, telephone);
+	public Cooperateur(double taux, int numParcelle) {
+		super();
 		this.taux = taux;
+		this.numParcelle = numParcelle;
 	}
-
 	public double getTaux() {
 		return taux;
 	}
-
 	public void setTaux(double taux) {
 		this.taux = taux;
 	}
+	public int getNumParcelle() {
+		return numParcelle;
+	}
+	public void setNumParcelle(int numParcelle) {
+		this.numParcelle = numParcelle;
+	}
+
+	
 	
 	
 }

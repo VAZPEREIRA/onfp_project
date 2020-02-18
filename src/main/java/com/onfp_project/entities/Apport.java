@@ -32,8 +32,10 @@ public class Apport implements Serializable {
 	private Camion camion;
 	@ManyToOne
 	private Livreur livreur;
-	@OneToMany(mappedBy="apport")
-	private Collection<Pese> peses;
+	@ManyToOne
+	private Site site;
+	@ManyToOne
+	private Responsable responsable;
 	
 	
 	public Long getNumApport() {

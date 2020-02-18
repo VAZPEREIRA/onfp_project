@@ -31,9 +31,9 @@ public class OnfpProjectApplication implements CommandLineRunner{
 	
 		
 		
-		apportRepository.save(new Apport("500","300","2019-11-10","2019-10-10"));
+		apportRepository.save(new Apport("500","2019-11-10","2019-10-10","300"));
 
-		apportRepository.save(new Apport("501","301","2019-11-10","2019-10-05"));
+		apportRepository.save(new Apport("501","2019-11-10","2019-10-05","301"));
 		
 
 		

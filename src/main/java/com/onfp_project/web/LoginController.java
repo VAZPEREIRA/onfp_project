@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class PaletteController {
+public class LoginController {
 
-	@GetMapping("/palettes")
-	public  String  getPalettes() {
-		return "palette";
+	@GetMapping("/logins")
+	public  String  getLogins() {
+		return "login";
 	}
 }
