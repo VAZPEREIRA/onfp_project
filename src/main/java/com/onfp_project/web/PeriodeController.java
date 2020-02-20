@@ -1,20 +1,19 @@
 //package com.onfp_project.web;
 
-//public class SiteController {
+//public class Periode {
 
 //}
 
-package com.onfp_project.web;
+ package com.onfp_project.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class SiteController {
-	
-	@GetMapping("/sites")
-	public  String  getSites() {
-		return "site";
+public class PeriodeController {
+	@GetMapping("/periodes")
+	public  String  getPeriodes() {
+		return "periode";
 	}
 
 }

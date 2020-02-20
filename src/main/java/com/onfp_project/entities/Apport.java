@@ -2,6 +2,7 @@ package com.onfp_project.entities;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -24,9 +25,9 @@ public class Apport implements Serializable {
 	private String poidsVides;
 	private String numItineraire;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private String dateArrivee;
+	private Date dateArrivee;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private String dateDepart;
+	private Date dateDepart;
 	
 	@ManyToOne
 	private Camion camion;
@@ -56,23 +57,23 @@ public class Apport implements Serializable {
 	public void setNumItineraire(String numItineraire) {
 		this.numItineraire = numItineraire;
 	}
-	public String getDateArrivee() {
+	public Date getDateArrivee() {
 		return dateArrivee;
 	}
-	public void setDateArrivee(String dateArrivee) {
+	public void setDateArrivee(Date dateArrivee) {
 		this.dateArrivee = dateArrivee;
 	}
-	public String getDateDepart() {
+	public Date getDateDepart() {
 		return dateDepart;
 	}
-	public void setDateDepart(String dateDepart) {
+	public void setDateDepart(Date dateDepart) {
 		this.dateDepart = dateDepart;
 	}
 	public Apport() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Apport(String poidsVides, String numItineraire, String dateArrivee, String dateDepart) {
+	public Apport(String poidsVides, String numItineraire, Date dateArrivee, Date dateDepart) {
 		super();
 		this.poidsVides = poidsVides;
 		this.numItineraire = numItineraire;
