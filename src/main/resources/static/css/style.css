@@ -9903,3 +9903,7 @@ span.customSelect.changed {
 #sendmessage.show, #errormessage.show, .show {
 	display:block;
 }
+
+.red{
+	color:red;
+}

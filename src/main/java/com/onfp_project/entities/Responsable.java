@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotNull;
 
 
 @Entity
@@ -15,9 +17,11 @@ public class Responsable implements Serializable{
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private  Long id;
+	@NotNull
 	private String nom;
 	private String prenom;
 	private String adresse;
+	@DecimalMin("9")
 	private String telephone;
 	
 	@OneToMany(mappedBy="responsable")

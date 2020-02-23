@@ -52,6 +52,10 @@ public class OnfpProjectApplication implements CommandLineRunner{
 		Responsable R2=responsableRepository.save(new Responsable("Fall","Aissatou","Mamelle","775168541"));
 		Responsable R3=responsableRepository.save(new Responsable("Seck","Omar","Keur Massar","783246713"));
 		
+		Responsable R4=responsableRepository.save(new Responsable("Niang","Moussa","Kolda","766167731"));
+		Responsable R5=responsableRepository.save(new Responsable("Diallo","Aida","Sicap","773138548"));
+		Responsable R6=responsableRepository.save(new Responsable("Pene","Fatou","Fatick","773746789"));
+		
 		Apport A1=apportRepository.save(new Apport("600KG", "NI04", new Date(), new Date()));
 		Apport A2=apportRepository.save(new Apport("600KG", "NI05", new Date(), new Date()));
 		Apport A3=apportRepository.save(new Apport("600KG", "NI06", new Date(), new Date()));

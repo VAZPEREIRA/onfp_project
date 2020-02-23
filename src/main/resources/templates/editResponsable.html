@@ -49,7 +49,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">SEN <span class="lite">CAMPAGNE</span></a>
+      <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -306,68 +306,79 @@
     <!--header end-->
 
     <!--sidebar start-->
-   <aside>
+    <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
+          <li class="">
             <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
-                          <span>CAMPAGNE</span>
+                          <span>Dashboard</span>
                       </a>
           </li>
-          
-            <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class=" fa fa-user fa-fw"></i>
-                          <span>Cooperative</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/responsables}">Responsable</a></li>
-              
-            </ul>
-          </li>
-          
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Vehicules</span>
+                          <span>Forms</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" th:href="@{/camions}">Camions</a></li>
-              
+              <li><a class="" href="form_component.html">Form Elements</a></li>
+              <li><a class="" href="form_validation.html">Form Validation</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="fa fa-cog fa-fw"></i>
-                          <span>Parametres</span>
+                          <i class="icon_desktop"></i>
+                          <span>UI Fitures</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" th:href="@{/apports}">Apport</a></li>
-              
+              <li><a class="" href="general.html">Components</a></li>
+              <li><a class="" href="buttons.html">Buttons</a></li>
+              <li><a class="" href="grids.html">Grids</a></li>
             </ul>
           </li>
-           <li class="sub-menu">
+          <li>
+            <a class="" href="widgets.html">
+                          <i class="icon_genius"></i>
+                          <span>Widgets</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="chart-chartjs.html">
+                          <i class="icon_piechart"></i>
+                          <span>Charts</span>
+
+                      </a>
+
+          </li>
+
+          <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="fa fa-users fa-fw"></i>
-                          <span>Chauffeur-livreur</span>
+                          <i class="icon_table"></i>
+                          <span>Tables</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" th:href="@{/livreurs}">Livreurs</a></li>
-              <li><a class="" th:href="@{/cooperateurs}">Cooperateurs</a></li>
-              <li><a class="" th:href="@{/independants}">Independants</a></li>
-         
-              
+              <li><a class="" href="basic_table.html">Basic Table</a></li>
             </ul>
           </li>
-         
-        
-          
+
+          <li class="sub-menu ">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>Pages</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="profile.html">Profile</a></li>
+              <li><a class="" href="login.html"><span>Login Page</span></a></li>
+              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
+              <li><a class="active" href="blank.html">Blank Page</a></li>
+              <li><a class="" href="404.html">404 Error</a></li>
+            </ul>
+          </li>
 
         </ul>
         <!-- sidebar menu end-->
@@ -389,71 +400,56 @@
           </div>
         </div>
         <!-- page start-->
-       <h1>LISTE DES CAMIONS</h1>
-       
-       <br>
-        <br>
-         <center>
-       
-       <form class="form-horizontal">
+      
+
+
+ <div layout:fragment="content1">
+<div class="col-md-6">
+<div class="panel panel-default">
+<div class="panel-heading">Nouveau Responsable</div>
+<div class="panel-body">
+<form th:action="@{/admin/save}" method="post">
+ <div class="form-group">
+ <label class="control-label">ID:</label>
+ <input class="form-control" type="text" name="id" 
+ th:value="${responsable.id}">
+
+ </div>
+ <div class="form-group">
+ <label class="control-label">Nom:</label>
+ <input class="form-control" type="text" name="nom" 
+ th:value="${responsable.nom}">
+
+ </div>
+ <div class="form-group">
+ <label class="control-label">Prenom:</label>
+ <input class="form-control" type="text" name="prenom"
+ th:value="${responsable.prenom}">
+
+ </div>
+
   <div class="form-group">
-    <label for="text" class="control-label col-xs-4">Nbre  Maximum de Palette</label> 
-    <div class="col-xs-8">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <i class="fa fa-bars"></i>
-        </div> 
-        <input id="text" name="text" type="text" class="form-control">
-      </div>
-    </div>
-  </div> 
-  <div class="form-group row">
-    <div class="col-xs-offset-4 col-xs-8">
-      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
-       
-        
-</center>
-
-<br>
-<br>
-
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
+ <label class="control-label">Adresse:</label>
+ <input class="form-control" type="text" name="adressl"
+ th:value="${responsable.adresse}">
+ 
+ </div>
+  <div class="form-group">
+ <label class="control-label">Telephone:</label>
+ <input class="form-control" type="text" name="telephone"
+ th:value="${responsable.telephone}">
+ 
+ </div>
+ <button type="submit" class="btn btn-primary">Save</button>
+ </form>
 </div>
-       
+</div>
+
+</div>
+ 
+</div>
+
+
         <!-- page end-->
       </section>
     </section>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<title>Saisie d'un responsable</title>
+</head>
+<body>
+<div layout:fragment="content1">
+<div class="col-md-6">
+<div class="panel panel-default">
+<div class="panel-heading">Nouveau Responsable</div>
+<div class="panel-body">
+<form th:action="@{/save}" method="post">
+ <div class="form-group">
+ <label class="control-label">ID:</label>
+ <input class="form-control" type="text" name="id" 
+ th:value="${responsable.id}">
+
+ </div>
+ <div class="form-group">
+ <label class="control-label">Nom:</label>
+ <input class="form-control" type="text" name="nom" 
+ th:value="${responsable.nom}">
+
+ </div>
+ <div class="form-group">
+ <label class="control-label">Prenom:</label>
+ <input class="form-control" type="text" name="prenom"
+ th:value="${responsable.prenom}">
+
+ </div>
+ 
+  <div class="form-group">
+ <label class="control-label">Adresse:</label>
+ <input class="form-control" type="text" name="adresse"
+ th:value="${responsable.adresse}">
+
+ </div>
+ 
+
+ <div class="form-group">
+ <label class="control-label">Telephone:</label>
+ <input class="form-control" type="text" name="telephone"
+ th:value="${responsable.telephone}">
+ 
+
+ <button type="submit" class="btn btn-primary">Save</button>
+ </form>
+</div>
+</div>
+
+</div>
+ 
+</div>
+
+</body>
+</html>
